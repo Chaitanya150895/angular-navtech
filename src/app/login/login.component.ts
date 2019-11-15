@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this.customer.setToken(token);
       this.customer.setUserId(id);
       console.log(id);
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('/orders');
       console.log(data);
 
     });

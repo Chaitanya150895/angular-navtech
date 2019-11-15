@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [NeedAuthGuard] },
-  { path: '', component: OrderListComponent, canActivate: [NeedAuthGuard] },
+  { path: 'orders', component: OrderListComponent, canActivate: [NeedAuthGuard] },
   { path: 'add', component: AddOrderComponent, canActivate: [NeedAuthGuard] },
   { path: 'details/view/:detailId', component: ViewOrderComponent, canActivate: [NeedAuthGuard] },
   { path: 'details/edit/:detailId', component: EditOrderComponent, canActivate: [NeedAuthGuard] }

@@ -30,6 +30,7 @@
                                 <td>{{detail.total}}</td>
                                 
                                 <td>
+                                    <a [routerLink]="['/details/view/', detail.id]"><button>view</button></a> |
                                     <a [routerLink]="['/details/edit/', detail.id]"><button>edit</button></a> |
                                     <a (click)="deleteDetail(detail.id, detailId)"><button>delete</button></a>
                                 </td>
