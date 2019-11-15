@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-list',
@@ -30,8 +31,9 @@ export class OrderListComponent implements OnInit {
       console.log(data);
       this.details = data['data'];
     });
-    
   }
+
+
   deleteDetail(id, detailId) {
     this.loading = true;
     this.http.deleteHttp("/details/" + id + ".json").subscribe(data => {
