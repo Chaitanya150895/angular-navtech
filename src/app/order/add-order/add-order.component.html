@@ -1,3 +1,5 @@
+
+<br>
 <a [routerLink]="['/orders']"><button style="float:right" class="btn btn-primary">Order List</button></a>
 <div class="row">
     <div class="col-md-4"></div>
@@ -5,7 +7,7 @@
     <div class="col-md-4">
         <div class="login-logo">
            <h1> Create New order</h1>
-        </div>
+        </div><br>
         <section class="content">
             <div class="row">
                 <div class="col-md-12">
@@ -13,13 +15,11 @@
                         <form [formGroup]="customForm" (ngSubmit)="onSubmit()">
                             <div class="box-body">
                                 <div class="form-group" *ngFor="let data of formData">
-                                    <br><label for="{{data.for}}">{{data.label}}</label>
+                                    <label for="{{data.for}}">{{data.label}}</label>
                                     <input *ngIf="data.control=='input'" type="{{data.type}}" class="form-control"
                                         id="{{data.id}}" placeholder="{{data.placeholder}}"
                                         formControlName="{{data.control_name}}">
-                                    
                                 </div>
-
                             </div><br>
                             <!-- /.box-body -->
                             <div class="box-footer">

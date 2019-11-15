@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { HttpService } from 'src/app/http.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-order',
@@ -26,7 +28,7 @@ export class AddOrderComponent implements OnInit {
     total: ['']
   });
 
-  constructor(private fb: FormBuilder, private httpService: HttpService) { }
+  constructor(private fb: FormBuilder, private httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -37,6 +39,7 @@ export class AddOrderComponent implements OnInit {
       ).subscribe(data => {
         console.log(data);
         this.customForm.reset();
+        this.router.navigateByUrl('/orders');
       });
   }
 

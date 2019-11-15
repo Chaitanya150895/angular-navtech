@@ -1,36 +1,41 @@
+<br>
+
 <a [routerLink]="['/orders']"><button style="float:right" class="btn btn-primary">Order List</button></a>
 
+<div class="row">
+    <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <section class="content-header">
+      <div >
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title" style="text-align: center;">View order</h3>
+          </div><br>
+          <div *ngIf="loading ">
+            <div class="overlay">
+              <i class="fa fa-refresh fa-spin"></i>
+            </div>
+          </div>
+          <div class="box-body">
+            <table *ngIf="!loading" class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th>KEY</th>
+                  <th>VALUE</th>
+                </tr>
+                <tr *ngFor="let l of detail | keyvalue">
+                  <td>
+                    {{l.key}}:
+                  </td>
+                  <td><span class="badge bg-green">{{l.value}}</span> </td>
+                </tr>
 
-<section class="content-header">
-    <div class="col-md-6">
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">View order</h3>
-        </div>
-        <div *ngIf="loading ">
-          <div class="overlay">
-            <i class="fa fa-refresh fa-spin"></i>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="box-body">
-          <table  *ngIf="!loading" class="table table-bordered">
-            <tbody>
-              <tr>
-                <th>KEY</th>
-                <th>VALUE</th>
-              </tr>
-              <tr *ngFor="let l of detail | keyvalue">
-                <td>
-                  {{l.key}}:
-                </td>
-                <td><span class="badge bg-green">{{l.value}}</span> </td>
-              </tr>
-  
-            </tbody>
-          </table>
-        </div>
+
       </div>
-  
-    </div>
-  </section>
-  
+    </section>
+  </div>
+</div>

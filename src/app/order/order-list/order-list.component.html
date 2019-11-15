@@ -1,14 +1,14 @@
-<app-dashboard></app-dashboard>
-<a [routerLink]="['/add']"><button style="float:right" class="btn btn-success">New Order</button></a>
-<div>
+<br>
+
+<div><app-dashboard></app-dashboard>
+<a [routerLink]="['/add']"><button style="float:right" class="btn btn-success">New Order</button></a></div>
+<div style="text-align: center;"><h2>
+        OrderList
+    </h2></div>
+<div><br>
     <div class="row">
-        <div class="col-xs-12">
-            <h2>
-                Detail List
-            </h2>
-        </div>
-        <div>
-            <table class="table table-bordered">
+                <div class="col-sm-12">
+            <table class="table table-bordered" style="text-align: center;">
                 <thead>
                     <tr>
                         <th *ngFor="let header of tableHeaders">

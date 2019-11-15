@@ -1,4 +1,4 @@
-<!-- Main content -->
+<br>
 <a [routerLink]="['/orders']"><button style="float:right" class="btn btn-primary">Order List</button></a>
 
 
@@ -16,7 +16,7 @@
                         <form [formGroup]="customForm" (ngSubmit)="onSubmit()">
                             <div class="box-body">
                                 <div class="form-group" *ngFor="let data of formData">
-                                    <br><label for="{{data.for}}">{{data.label}}</label>
+                                    <label for="{{data.for}}">{{data.label}}</label>
                                     <input *ngIf="data.control=='input'" type="{{data.type}}" class="form-control"
                                         id="{{data.id}}" placeholder="{{data.placeholder}}"
                                         formControlName="{{data.control_name}}">
@@ -24,12 +24,10 @@
                                 </div>
 
                             </div><br>
-                            <!-- /.box-body -->
                             <div class="box-footer">
                                 <button type="submit" class="btn-success">Submit</button>
 
                             </div>
-                            <!-- {{customForm.value | json}} -->
                         </form>
                     </div>
 

@@ -53,7 +53,7 @@ export class EditOrderComponent implements OnInit {
       .pipe().subscribe(data => {
         console.log(data);
         this.customForm.reset();
-        this.router.navigateByUrl('/details');
+        this.router.navigateByUrl('/orders');
       }
       );
   }

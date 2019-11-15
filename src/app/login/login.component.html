@@ -1,19 +1,32 @@
-<div class="panel panel-primary">
-  Login
+<div class="bg-light text-dark">
 
-  <div class="panel-heading">
-    <input type="username" class="form-control" placeholder="username" [(ngModel)]="username">
-  </div>
+  <div class="row">
 
-  <div class="panel-heading">
-    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
-  </div>
+    <div class="col-sm-4"></div>
 
-  <div class="panel-heading">
-      <input type="checkbox" class="form-control" placeholder="" >Remember Me
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div style="text-align: center;">
+          <h1> Login</h1>
+        </div>
+
+        <div class="panel-heading">
+          <input type="username" class="form-control" placeholder="username" [(ngModel)]="username">
+        </div><br>
+
+        <div class="panel-heading">
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+        </div><br>
+
+        <div class="panel-heading" style="text-align: center;">
+          <input type="checkbox" class="form-control" placeholder="">Remember Me
+        </div><br>
+
+        <div class="panel-heading">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="tryLogin()">Sign In</button>
+        </div>
+      </div>
     </div>
-
-  <div class="panel-heading">
-    <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="tryLogin()">Sign In</button>
   </div>
+  <br><br>
 </div>

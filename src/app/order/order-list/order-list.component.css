@@ -1,4 +1,12 @@
 .row {
     
-    margin-left: 0px; 
+  
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #8787c72b;
+    
 }
