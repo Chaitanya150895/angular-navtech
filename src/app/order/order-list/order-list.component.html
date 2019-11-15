@@ -1,57 +1,38 @@
 <app-dashboard></app-dashboard>
-
-<!-- Main content -->
-<a [routerLink]="['/add']"><button>New Order</button></a>
-
-<section class="content">
+<a [routerLink]="['/add']"><button style="float:right" class="btn btn-success">New Order</button></a>
+<div>
     <div class="row">
         <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header">
-                    <h2>
-                        Detail List
-                    </h2> 
-                    <div class="box-tools">
-                        
-                    </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th *ngFor="let header of tableHeaders">
-                                    {{header}}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let detail of details; let detailId = index">
-                                <td>{{detail.id}}</td>
-                                <td>{{detail.name}}</td>
-                                <td>{{detail.due}}</td>
-                                <td>{{detail.address}}</td>
-                                <td>{{detail.phone}}</td>
-                                <td>{{detail.total}}</td>
-                                
-                                <td>
-                                    <a [routerLink]="['/details/view/', detail.id]"><button>view</button></a> |
-                                    <a [routerLink]="['/details/edit/', detail.id]"><button>edit</button></a> |
-                                    <a (click)="deleteDetail(detail.id, detailId)"><button>delete</button></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <ul class="pagination pagination-sm no-margin pull-right">
+            <h2>
+                Detail List
+            </h2>
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th *ngFor="let header of tableHeaders">
+                            {{header}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detail of details; let detailId = index">
+                        <td>{{detail.id}}</td>
+                        <td>{{detail.name}}</td>
+                        <td>{{detail.due}}</td>
+                        <td>{{detail.address}}</td>
+                        <td>{{detail.phone}}</td>
+                        <td>{{detail.total}}</td>
 
-                    </ul>
-                </div>
-            </div>
-            <!-- /.box -->
+                        <td>
+                            <a [routerLink]="['/details/view/', detail.id]"><button >view</button></a> |
+                            <a [routerLink]="['/details/edit/', detail.id]"><button >edit</button></a> |
+                            <a (click)="deleteDetail(detail.id, detailId)"><button >delete</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-</section>
-<!-- /.content -->
+</div>

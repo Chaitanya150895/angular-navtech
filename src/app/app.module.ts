@@ -14,6 +14,8 @@ import { EditOrderComponent } from './order/edit-order/edit-order.component';
 import { ViewOrderComponent } from './order/view-order/view-order.component';
 import { OrderListComponent } from './order/order-list/order-list.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { OrderListComponent } from './order/order-list/order-list.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 <!-- Main content -->
-<a [routerLink]="['/orders']"><button>Order List</button></a>
+<a [routerLink]="['/orders']"><button style="float:right" class="btn btn-primary">Order List</button></a>
 
 
 <div class="row">
@@ -7,7 +7,7 @@
 
     <div class="col-md-4">
         <div class="login-logo">
-            Update the order
+           <h1> Update the order</h1>
         </div>
         <section class="content">
             <div class="row">
@@ -29,7 +29,7 @@
                                 <button type="submit" class="btn-success">Submit</button>
 
                             </div>
-                            {{customForm.value | json}}
+                            <!-- {{customForm.value | json}} -->
                         </form>
                     </div>
 
