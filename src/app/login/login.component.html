@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  Login
+
+  <div class="panel-heading">
+    <input type="username" class="form-control" placeholder="username" [(ngModel)]="username">
+  </div>
+
+  <div class="panel-heading">
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+  </div>
+
+  <div class="panel-heading">
+    <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="tryLogin()">Sign In</button>
+  </div>
+</div>

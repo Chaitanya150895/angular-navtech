@@ -1,0 +1,40 @@
+
+<div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <div class="login-logo">
+            Create New order
+        </div>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <form [formGroup]="customForm" (ngSubmit)="onSubmit()">
+                            <div class="box-body">
+                                <div class="form-group" *ngFor="let data of formData">
+                                    <br><label for="{{data.for}}">{{data.label}}</label>
+                                    <input *ngIf="data.control=='input'" type="{{data.type}}" class="form-control"
+                                        id="{{data.id}}" placeholder="{{data.placeholder}}"
+                                        formControlName="{{data.control_name}}">
+                                    
+                                </div>
+
+                            </div><br>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button type="submit" class="btn-success">Submit</button>
+
+                            </div>
+                            <!-- {{customForm.value | json}} -->
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
