@@ -10,7 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [NeedAuthGuard] },
   { path: 'orders', component: OrderListComponent, canActivate: [NeedAuthGuard] },
   { path: 'add', component: AddOrderComponent, canActivate: [NeedAuthGuard] },
